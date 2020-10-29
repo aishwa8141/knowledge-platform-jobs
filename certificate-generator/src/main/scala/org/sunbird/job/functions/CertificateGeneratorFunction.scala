@@ -50,6 +50,7 @@ class CertificateGeneratorFunction(config: CertificateGeneratorConfig)
   }
 
   override def processElement(event: java.util.Map[String, AnyRef], context: ProcessFunction[java.util.Map[String, AnyRef], String]#Context, metrics: Metrics): Unit = {
+    logger.info("edata : " + event)
     val certReq: util.Map[String, AnyRef] = event.get(config.EDATA).asInstanceOf[util.Map[String, AnyRef]]
     metrics.incCounter(config.totalEventsCount)
     try {
