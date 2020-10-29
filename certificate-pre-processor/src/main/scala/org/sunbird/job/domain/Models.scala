@@ -23,7 +23,7 @@ case class EventObject(id: String, `type`: String)
 // user related data need to add into generate event
 case class UserDetails(data: util.ArrayList[java.util.Map[String, AnyRef]], orgId: String)
 
-case class Data(recipientName: String, recipientId: String)
+case class Data(recipientId: String, recipientName: String)
 
 case class OrgDetails(keys: util.Map[String, AnyRef])
 
